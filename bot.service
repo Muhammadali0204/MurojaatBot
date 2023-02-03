@@ -1,0 +1,13 @@
+[Unit]
+Description=Murojaat bot
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+Type=simple
+WorkingDirectory=/home/ubuntu/MurojaatBot
+ExecStart=/home/ubuntu/MurojaatBot/venv/bin/python app.py
+
+[Install]
+WantedBy=multi-user.target
