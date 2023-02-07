@@ -44,10 +44,10 @@ async def tasdiq(call : types.CallbackQuery, state : FSMContext):
     
 @dp.callback_query_handler(text="davom", state="tasdiq_rasm")
 async def qayta(call : types.CallbackQuery, state : FSMContext):
-    await call.message.delete()
     await call.answer(f"Linklar soni {len(temp[1][1])} ta")
+    await call.message.delete()
     await call.message.answer("<b>Keyingi linkni yuboring : </b>")
-    await state.set_state("link")
+    await state.set_state("link_rasm")
     
 @dp.callback_query_handler(text="atmen", state="tasdiq_rasm")
 async def qayta(call : types.CallbackQuery, state : FSMContext):

@@ -48,7 +48,7 @@ async def qayta(call : types.CallbackQuery, state : FSMContext):
     await call.message.delete()
     await call.answer(f"Linklar soni {len(temp[1][1])} ta")
     await call.message.answer("<b>Keyingi linkni yuboring : </b>")
-    await state.set_state("link")
+    await state.set_state("link_video")
     
 @dp.callback_query_handler(text="atmen", state="tasdiq_video")
 async def qayta(call : types.CallbackQuery, state : FSMContext):
